@@ -25,4 +25,31 @@ public class ListTests {
         assertEquals(checkExpected, ListExamples.filter(input1, myList, match));
 
     }
+
+    @Test
+    public void testMerge(){
+        List<String>firstArray = new ArrayList<>();
+        firstArray.add("apple");
+        firstArray.add("banana");
+        firstArray.add("crab");
+        firstArray.add("error");
+
+        List<String>secondArray = new ArrayList<>();
+        secondArray.add("atlanta");
+        secondArray.add("ball");
+        secondArray.add("crab");
+        secondArray.add("dream");
+
+        List<String>finalArray = new ArrayList<>();
+        finalArray.add("apple");
+        finalArray.add("atlanta");
+        finalArray.add("ball");
+        finalArray.add("banana");
+        finalArray.add("crab");
+        finalArray.add("crab");
+        finalArray.add("dream");
+        finalArray.add("error");
+
+        assertEquals(finalArray, ListExamples.merge(firstArray, secondArray));
+    }
 }

@@ -86,6 +86,6 @@ class LinkedList {
             i += 1;
             n = n.next;
         }
-        return i;
+        return i + 1;
     }
 }
